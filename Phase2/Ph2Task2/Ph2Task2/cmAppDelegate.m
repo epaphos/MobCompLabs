@@ -7,6 +7,8 @@
 //
 
 #import "cmAppDelegate.h"
+#import "SimpleBookManager.h"
+#import "cmMasterViewController.h"
 
 @implementation cmAppDelegate
 
@@ -18,6 +20,13 @@
         UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
         splitViewController.delegate = (id)navigationController.topViewController;
     }
+    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+//    cmMasterViewController *masterViewController = (cmMasterViewController *)[[navigationController viewControllers]objectAtIndex:0];
+    cmMasterViewController *masterViewController = (cmMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
+    SimpleBookManager *bookManager = [[SimpleBookManager alloc] init];
+    masterViewController.bookManager = bookManager;
+    
     return YES;
 }
 							

@@ -9,6 +9,8 @@
 #import "cmMasterViewController.h"
 
 #import "cmDetailViewController.h"
+#import "SimpleBookManager.h"
+#import "Book.h"
 
 @interface cmMasterViewController () {
     NSMutableArray *_objects;
@@ -62,15 +64,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [self.bookManager count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    NSUInteger index = indexPath.row;
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSString *string = [[self.bookManager bookAtIndex:index] title];
+    
+    cell.textLabel.text = string;
     return cell;
 }
 
@@ -83,7 +87,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [_objects removeObjectAtIndex:indexPath.row];
+        [self.bookManager removeBook:[self.bookManager bookAtIndex:indexPath.row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -118,7 +122,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
+        Book *object = [self.bookManager bookAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }

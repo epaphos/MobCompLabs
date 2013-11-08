@@ -7,10 +7,12 @@
 //
 
 #import "cmDetailViewController.h"
+#import "Book.h"
 
 @interface cmDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
+@property (strong, nonatomic) Book *book;
 @end
 
 @implementation cmDetailViewController
@@ -21,7 +23,7 @@
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        
+        _book = (Book *)newDetailItem;
         // Update the view.
         [self configureView];
     }
@@ -36,7 +38,13 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.lblTitle.text = [self.book title];
+        self.lblAuthor.text = [self.book author];
+        self.lblCourse.text = [self.book course];
+        self.lblISBN.text = [self.book isbn];
+        self.lblPrice.text = [NSString stringWithFormat:@"%d $",[self.book price]];
+        
+        
     }
 }
 

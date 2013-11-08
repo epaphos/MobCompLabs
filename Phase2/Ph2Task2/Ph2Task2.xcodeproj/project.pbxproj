@@ -23,6 +23,8 @@
 		E7F9428A182D3DF50082D57B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F94266182D3DF50082D57B /* UIKit.framework */; };
 		E7F94292182D3DF50082D57B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7F94290182D3DF50082D57B /* InfoPlist.strings */; };
 		E7F94294182D3DF50082D57B /* Ph2Task2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F94293182D3DF50082D57B /* Ph2Task2Tests.m */; };
+		E7F942A2182D40180082D57B /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F9429F182D40180082D57B /* Book.m */; };
+		E7F942A3182D40180082D57B /* SimpleBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F942A1182D40180082D57B /* SimpleBookManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,11 @@
 		E7F9428F182D3DF50082D57B /* Ph2Task2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ph2Task2Tests-Info.plist"; sourceTree = "<group>"; };
 		E7F94291182D3DF50082D57B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E7F94293182D3DF50082D57B /* Ph2Task2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ph2Task2Tests.m; sourceTree = "<group>"; };
+		E7F9429D182D40180082D57B /* BookManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookManagerProtocol.h; sourceTree = "<group>"; };
+		E7F9429E182D40180082D57B /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		E7F9429F182D40180082D57B /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		E7F942A0182D40180082D57B /* SimpleBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBookManager.h; sourceTree = "<group>"; };
+		E7F942A1182D40180082D57B /* SimpleBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBookManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +124,11 @@
 		E7F94268182D3DF50082D57B /* Ph2Task2 */ = {
 			isa = PBXGroup;
 			children = (
+				E7F9429D182D40180082D57B /* BookManagerProtocol.h */,
+				E7F9429E182D40180082D57B /* Book.h */,
+				E7F9429F182D40180082D57B /* Book.m */,
+				E7F942A0182D40180082D57B /* SimpleBookManager.h */,
+				E7F942A1182D40180082D57B /* SimpleBookManager.m */,
 				E7F94271182D3DF50082D57B /* cmAppDelegate.h */,
 				E7F94272182D3DF50082D57B /* cmAppDelegate.m */,
 				E7F94274182D3DF50082D57B /* Main_iPhone.storyboard */,
@@ -259,9 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F942A2182D40180082D57B /* Book.m in Sources */,
 				E7F94273182D3DF50082D57B /* cmAppDelegate.m in Sources */,
 				E7F9427F182D3DF50082D57B /* cmDetailViewController.m in Sources */,
 				E7F9427C182D3DF50082D57B /* cmMasterViewController.m in Sources */,
+				E7F942A3182D40180082D57B /* SimpleBookManager.m in Sources */,
 				E7F9426F182D3DF50082D57B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

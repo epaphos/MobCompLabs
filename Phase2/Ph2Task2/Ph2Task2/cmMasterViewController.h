@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @class cmDetailViewController;
+@class SimpleBookManager;
 
 @interface cmMasterViewController : UITableViewController
 
 @property (strong, nonatomic) cmDetailViewController *detailViewController;
+@property (strong, nonatomic) SimpleBookManager *bookManager;
 
 @end
