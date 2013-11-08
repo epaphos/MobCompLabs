@@ -15,5 +15,7 @@
 
 @property (strong, nonatomic) cmDetailViewController *detailViewController;
 @property (strong, nonatomic) SimpleBookManager *bookManager;
+- (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender;
+
 
 @end

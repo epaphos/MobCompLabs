@@ -56,7 +56,13 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Library" id="tQt-TN-PWz">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dgS-u6-Mh1">
+                            <connections>
+                                <segue destination="EGP-z6-DFp" kind="modal" id="6TR-rx-Myg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
@@ -145,6 +151,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="902" y="64"/>
+        </scene>
+        <!--Cm Change Book View Controller - Add/Change Book-->
+        <scene sceneID="xSL-7m-E1a">
+            <objects>
+                <viewController id="LLh-K0-qfP" customClass="cmChangeBookViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cVJ-A6-dfg"/>
+                        <viewControllerLayoutGuide type="bottom" id="tbD-KC-Kre"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q1F-vd-EUd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add/Change Book" id="y80-cr-7Pa">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="BIt-4M-mWJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="4yf-AP-fhf"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTF-WT-w1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1434" y="-618"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lvu-OR-wBo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4KD-sJ-LAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EGP-z6-DFp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="feE-jt-Edr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LLh-K0-qfP" kind="relationship" relationship="rootViewController" id="7Mp-FP-tU9"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="908" y="-618"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

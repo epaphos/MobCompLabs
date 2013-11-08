@@ -25,6 +25,7 @@
 		E7F94294182D3DF50082D57B /* Ph2Task2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F94293182D3DF50082D57B /* Ph2Task2Tests.m */; };
 		E7F942A2182D40180082D57B /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F9429F182D40180082D57B /* Book.m */; };
 		E7F942A3182D40180082D57B /* SimpleBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F942A1182D40180082D57B /* SimpleBookManager.m */; };
+		E7F942A6182DA5DC0082D57B /* cmChangeBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F942A5182DA5DC0082D57B /* cmChangeBookViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		E7F9429F182D40180082D57B /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		E7F942A0182D40180082D57B /* SimpleBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBookManager.h; sourceTree = "<group>"; };
 		E7F942A1182D40180082D57B /* SimpleBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBookManager.m; sourceTree = "<group>"; };
+		E7F942A4182DA5DC0082D57B /* cmChangeBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmChangeBookViewController.h; sourceTree = "<group>"; };
+		E7F942A5182DA5DC0082D57B /* cmChangeBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmChangeBookViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +140,8 @@
 				E7F9427B182D3DF50082D57B /* cmMasterViewController.m */,
 				E7F9427D182D3DF50082D57B /* cmDetailViewController.h */,
 				E7F9427E182D3DF50082D57B /* cmDetailViewController.m */,
+				E7F942A4182DA5DC0082D57B /* cmChangeBookViewController.h */,
+				E7F942A5182DA5DC0082D57B /* cmChangeBookViewController.m */,
 				E7F94280182D3DF50082D57B /* Images.xcassets */,
 				E7F94269182D3DF50082D57B /* Supporting Files */,
 			);
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7F942A6182DA5DC0082D57B /* cmChangeBookViewController.m in Sources */,
 				E7F942A2182D40180082D57B /* Book.m in Sources */,
 				E7F94273182D3DF50082D57B /* cmAppDelegate.m in Sources */,
 				E7F9427F182D3DF50082D57B /* cmDetailViewController.m in Sources */,

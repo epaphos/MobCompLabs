@@ -34,8 +34,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (cmDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
@@ -124,7 +124,8 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Book *object = [self.bookManager bookAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
-    }
+        NSLog(@"showDetail");
+    } 
 }
 
 @end
