@@ -7,7 +7,7 @@
 //
 
 #import "cmMasterViewController.h"
-
+#import "cmChangeBookViewController.h"
 #import "cmDetailViewController.h"
 #import "SimpleBookManager.h"
 #import "Book.h"
@@ -126,6 +126,24 @@
         [[segue destinationViewController] setDetailItem:object];
         NSLog(@"showDetail");
     } 
+}
+
+- (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender {
+    
+    // Does nothing
+    
+}
+
+- (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender {
+    
+    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
+    
+    if (controller != nil)
+    {
+        [self.bookManager addBook:(Book *)controller.titleTextField];
+//   [self. addPerson:controller.person];
+    [[self tableView]  reloadData];
+    }
 }
 
 @end

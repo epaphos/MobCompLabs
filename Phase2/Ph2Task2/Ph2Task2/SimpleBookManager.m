@@ -45,7 +45,7 @@ NSInteger curTotalCost;
 
 
 - (Book *)createBook {
-    Book *book = [[Book alloc] initCoolBook];
+    Book *book = [[Book alloc] init];
     [_allBooks addObject:book];
     
     return book;
@@ -63,6 +63,10 @@ NSInteger curTotalCost;
 
 - (Book *)bookAtIndex:(NSUInteger)index{
     return [_allBooks objectAtIndex:index];
+}
+
+- (void) addBook:(Book *)b {
+    [_allBooks addObject:b];
 }
 
 - (void)removeBook:(Book *)b{

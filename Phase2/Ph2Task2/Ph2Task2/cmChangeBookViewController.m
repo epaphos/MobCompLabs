@@ -48,7 +48,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
-    if (theTextField == self.nameTextField || theTextField == self.ageTextField) {
+    if (theTextField == self.titleTextField || theTextField == self.authorTextField || theTextField == self.courseTextField || theTextField == self.isbnTextField || theTextField == self.priceTextField) {
         [theTextField resignFirstResponder];
     }
     return YES;
@@ -56,7 +56,16 @@
 
 - (void)saveData {
     
+    self.book.title = self.titleTextField.text;
+    self.book.author = self.authorTextField.text;
+    self.book.course = self.courseTextField.text;
+    self.book.isbn = self.isbnTextField.text;
+    self.book.price = [self.priceTextField.text integerValue];
+    
+    
     
 }
 
+- (IBAction)cancleAddBook:(id)sender {
+}
 @end

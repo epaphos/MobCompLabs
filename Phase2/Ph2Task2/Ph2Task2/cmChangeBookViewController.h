@@ -14,7 +14,13 @@
 
 @property (nonatomic, strong) Book *book;
 
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *ageTextField;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *authorTextField;
+@property (weak, nonatomic) IBOutlet UITextField *courseTextField;
+@property (weak, nonatomic) IBOutlet UITextField *isbnTextField;
+@property (weak, nonatomic) IBOutlet UITextField *priceTextField;
+
+
+
 
 @end

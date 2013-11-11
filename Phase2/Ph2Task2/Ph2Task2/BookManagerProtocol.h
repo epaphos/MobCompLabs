@@ -20,6 +20,7 @@
 - (Book *)createBook;
 - (NSArray *)allBooks;
 - (void)removeBook:(Book *)b;
+- (void)addBook:(Book *)b;
 
 - (void)moveBookAtIndex:(NSUInteger)from toIndex:(NSUInteger)to;
 
