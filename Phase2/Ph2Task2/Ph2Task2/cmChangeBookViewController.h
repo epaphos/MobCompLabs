@@ -10,7 +10,7 @@
 
 @class Book;
 
-@interface cmChangeBookViewController : UIViewController
+@interface cmChangeBookViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) Book *book;
 
