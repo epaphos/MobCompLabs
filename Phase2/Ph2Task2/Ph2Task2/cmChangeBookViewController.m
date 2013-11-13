@@ -63,6 +63,10 @@
 
     NSLog(@"saveDataInChangeController");
     
+    if ([self.tfTitle.text length]<2){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You must fill in a title" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok",nil];
+        [alertView show];
+    }
     Book *book = [[Book alloc]init];
     self.book = book;
     self.book.title = self.tfTitle.text;
@@ -83,5 +87,23 @@
 }
 
 - (IBAction)cancleAddBook:(id)sender {
+}
+
+- (IBAction) showAlert {
+	//First example
+	/*UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An alert" message:@"The message" delegate:self cancelButtonTitle:@"Cancel title" otherButtonTitles:nil];
+     [alertView show];
+     [alertView release];*/
+	
+	
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        NSLog(@"Cancel Tapped.");
+    }
+    else if (buttonIndex == 1) {
+        NSLog(@"OK Tapped. Hello World!");
+    }
 }
 @end

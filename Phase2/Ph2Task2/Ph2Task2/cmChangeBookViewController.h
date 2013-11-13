@@ -22,7 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfPrice;
 
 
-
+- (IBAction) showAlert;
 
 
 
