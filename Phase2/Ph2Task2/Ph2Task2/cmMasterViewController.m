@@ -138,13 +138,16 @@
 
 - (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender {
     
-
     NSLog(@"in undwindAddBookDone");
     cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
-    if (controller != nil){}
+    if (controller != nil){
     [self.bookManager addBook:controller.book];
-    NSLog(controller.book.title);
+    NSLog(@"%@", controller.book.title);
     [[self tableView]  reloadData];
+    }    
+    else{
+    
+    }
 }
 
 @end
