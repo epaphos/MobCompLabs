@@ -49,8 +49,10 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
+
     NSLog(@"shouldReturn");
     if (theTextField == self.tfTitle || theTextField == self.tfAuthor) {
+
         [theTextField resignFirstResponder];
     }
     return YES;
@@ -58,6 +60,7 @@
 
 - (void)saveData {
     
+
     NSLog(@"saveDataInChangeController");
     
     Book *book = [[Book alloc]init];
@@ -73,9 +76,12 @@
     self.book.isbn = self.tfISBN.text;
     
     
+
     
     
     
 }
 
+- (IBAction)cancleAddBook:(id)sender {
+}
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "cmMasterViewController.h"
-
+#import "cmChangeBookViewController.h"
 #import "cmDetailViewController.h"
 #import "SimpleBookManager.h"
 #import "Book.h"
@@ -130,15 +130,18 @@
 }
 
 - (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender {
+
     //Nothing needs to be done here
     NSLog(@"in undwindAddBookCancel");
+
 }
 
 - (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender {
     
+
     NSLog(@"in undwindAddBookDone");
     cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
-    
+    if (controller != nil){}
     [self.bookManager addBook:controller.book];
     NSLog(controller.book.title);
     [[self tableView]  reloadData];

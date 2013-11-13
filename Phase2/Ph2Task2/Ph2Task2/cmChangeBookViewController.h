@@ -14,10 +14,16 @@
 
 @property (nonatomic, strong) Book *book;
 
+
 @property (weak, nonatomic) IBOutlet UITextField *tfAuthor;
 @property (weak, nonatomic) IBOutlet UITextField *tfTitle;
 @property (weak, nonatomic) IBOutlet UITextField *tfCourse;
 @property (weak, nonatomic) IBOutlet UITextField *tfISBN;
 @property (weak, nonatomic) IBOutlet UITextField *tfPrice;
+
+
+
+
+
 
 @end

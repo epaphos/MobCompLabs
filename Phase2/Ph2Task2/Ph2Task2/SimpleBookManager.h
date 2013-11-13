@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BookManagerProtocol.h"
 
+@class book;
 @interface SimpleBookManager : NSObject <BookManagerProtocol> {
 
 }
