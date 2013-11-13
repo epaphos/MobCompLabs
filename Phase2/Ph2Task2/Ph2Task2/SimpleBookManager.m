@@ -1,20 +1,24 @@
 //
 //  SimpleBookManager.m
-//  BookDetail
+//  Task1
 //
-//  Created by MSchade on 08/11/13.
+//  Created by MSchade on 03/11/13.
 //  Copyright (c) 2013 MSchade. All rights reserved.
 //
 
 #import "SimpleBookManager.h"
 #import "Book.h"
 
-@implementation SimpleBookManager
+@interface SimpleBookManager() {
+    
+    NSMutableArray *_allBooks;
+    NSInteger curMinPrice;
+    NSInteger curMaxPrice;
+    NSInteger curTotalCost;
+}
 
-NSMutableArray *_allBooks;
-NSInteger curMinPrice;
-NSInteger curMaxPrice;
-NSInteger curTotalCost;
+@end
+@implementation SimpleBookManager
 
 
 - (id)init {
@@ -23,20 +27,14 @@ NSInteger curTotalCost;
     if (self) {
         
         _allBooks = [[NSMutableArray alloc] init];
-        curMinPrice = 0;
-        curMaxPrice = 0;
-        curTotalCost = 0;
+    
         
-        
-        
-        //Book *testBook; testBook = [[Book alloc] init];
         
         for (int i = 0; i < 5; i++) {
             [self createBook];
-            NSLog(@"%d", i);
         }
-        
-        
+       
+       
         
     }
     
@@ -45,21 +43,21 @@ NSInteger curTotalCost;
 
 
 - (Book *)createBook {
-    Book *book = [[Book alloc] init];
+    Book *book = [[Book alloc] initCoolBook];
     [_allBooks addObject:book];
     
     return book;
 }
 
-- (void)addBook:(Book *)b{
-    [_allBooks addObject:b];
-}
 
 - (NSUInteger) count {
     return [_allBooks count];
 }
 
+- (void) addBook:(Book *)b {
+    [_allBooks addObject:b];
 
+}
 - (NSArray *)allBooks {
     return (NSArray *)[_allBooks copy];
 }
@@ -67,7 +65,6 @@ NSInteger curTotalCost;
 - (Book *)bookAtIndex:(NSUInteger)index{
     return [_allBooks objectAtIndex:index];
 }
-
 
 - (void)removeBook:(Book *)b{
     [_allBooks removeObject:b];
@@ -79,7 +76,7 @@ NSInteger curTotalCost;
     [_allBooks insertObject:book atIndex:to];
 }
 - (NSUInteger) minPrice {
-    
+    curMinPrice = 0;
     curMinPrice = [[_allBooks objectAtIndex:0] price];
     for (id book in _allBooks) {
         
@@ -94,6 +91,7 @@ NSInteger curTotalCost;
 
 
 - (NSUInteger) maxPrice {
+    curMaxPrice = 0;
     curMaxPrice = [[_allBooks objectAtIndex:0] price];
     
     for ( id book in _allBooks) {
@@ -127,3 +125,4 @@ NSInteger curTotalCost;
 }
 
 @end
+

@@ -272,7 +272,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4KD-sJ-LAa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-
             </objects>
             <point key="canvasLocation" x="1434" y="-618"/>
         </scene>
@@ -404,7 +403,6 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06Q-W8-AHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-
             </objects>
             <point key="canvasLocation" x="318" y="-618"/>
         </scene>
