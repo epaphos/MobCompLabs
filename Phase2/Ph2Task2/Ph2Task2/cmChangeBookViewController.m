@@ -63,10 +63,7 @@
 
     NSLog(@"saveDataInChangeController");
     
-    if ([self.tfTitle.text length]<2){
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You must fill in a title" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok",nil];
-        [alertView show];
-    }
+    
     Book *book = [[Book alloc]init];
     self.book = book;
     self.book.title = self.tfTitle.text;
@@ -79,6 +76,11 @@
     self.book.course = self.tfCourse.text;
     self.book.isbn = self.tfISBN.text;
     
+    
+    if ([self.tfTitle.text length]<2){
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You must fill in a title" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok",nil];
+        [alertView show];
+    }
     
 
     
