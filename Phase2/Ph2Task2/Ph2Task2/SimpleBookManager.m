@@ -51,6 +51,9 @@ NSInteger curTotalCost;
     return book;
 }
 
+- (void)addBook:(Book *)b{
+    [_allBooks addObject:b];
+}
 
 - (NSUInteger) count {
     return [_allBooks count];
@@ -64,6 +67,8 @@ NSInteger curTotalCost;
 - (Book *)bookAtIndex:(NSUInteger)index{
     return [_allBooks objectAtIndex:index];
 }
+
+
 
 - (void)removeBook:(Book *)b{
     [_allBooks removeObject:b];

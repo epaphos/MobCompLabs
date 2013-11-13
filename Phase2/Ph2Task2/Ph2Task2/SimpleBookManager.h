@@ -13,6 +13,6 @@
 
 }
 
-
+- (void)addBook:(Book *)b;
 
 @end

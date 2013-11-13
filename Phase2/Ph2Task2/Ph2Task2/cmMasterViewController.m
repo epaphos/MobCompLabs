@@ -11,6 +11,7 @@
 #import "cmDetailViewController.h"
 #import "SimpleBookManager.h"
 #import "Book.h"
+#import "cmChangeBookViewController.h"
 
 @interface cmMasterViewController () {
     NSMutableArray *_objects;
@@ -126,6 +127,21 @@
         [[segue destinationViewController] setDetailItem:object];
         NSLog(@"showDetail");
     } 
+}
+
+- (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender {
+    //Nothing needs to be done here
+    NSLog(@"in undwindAddBookCancel");
+}
+
+- (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender {
+    
+    NSLog(@"in undwindAddBookDone");
+    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
+    
+    [self.bookManager addBook:controller.book];
+    NSLog(controller.book.title);
+    [[self tableView]  reloadData];
 }
 
 @end

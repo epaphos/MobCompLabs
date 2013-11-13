@@ -41,20 +41,39 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     NSLog(@"Exit add");
-    
+    NSLog(@"%d", [sender tag]);
     if ([sender tag]){ // save
+        
         [self saveData];
     }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
-    if (theTextField == self.nameTextField || theTextField == self.ageTextField) {
+    NSLog(@"shouldReturn");
+    if (theTextField == self.tfTitle || theTextField == self.tfAuthor) {
         [theTextField resignFirstResponder];
     }
     return YES;
 }
 
 - (void)saveData {
+    
+    NSLog(@"saveDataInChangeController");
+    
+    Book *book = [[Book alloc]init];
+    self.book = book;
+    self.book.title = self.tfTitle.text;
+    
+//    NSLog(self.tfTitle.text);
+    NSLog(@"self.book.title");
+    NSLog(self.book.title);
+    self.book.price = [self.tfPrice.text integerValue];
+    self.book.author = self.tfAuthor.text;
+    self.book.course = self.tfCourse.text;
+    self.book.isbn = self.tfISBN.text;
+    
+    
+    
     
     
 }
