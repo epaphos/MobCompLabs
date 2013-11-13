@@ -1,15 +1,15 @@
 //
 //  Book.h
-//  BookDetail
+//  Task1
 //
-//  Created by MSchade on 08/11/13.
+//  Created by MSchade on 03/11/13.
 //  Copyright (c) 2013 MSchade. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 @interface Book : NSObject {
-    
+
 }
 
 @property (copy) NSString *author;
