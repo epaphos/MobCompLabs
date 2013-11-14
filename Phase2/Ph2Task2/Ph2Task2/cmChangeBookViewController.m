@@ -56,10 +56,8 @@
     
     if ([self.tfTitle.text length]<2 && [sender tag]){
 
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You mus fill in a title" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel",nil];
-        UIAlertView *aV = [[UIAlertView alloc] init];
         
-        [alertView show];
+        [self showAlert];
         NSLog(@"Alert Started");
         return NO;
     } else {
@@ -110,8 +108,8 @@
     
 }
 
-- (IBAction)cancleAddBook:(id)sender {
-}
+//- (IBAction)cancleAddBook:(id)sender {
+//}
 
 - (IBAction) showAlert {
    
@@ -120,34 +118,33 @@
     [alertView show];
     NSLog(@"Alert Started");
     }
-    else{
-    NSLog(@"Save Data");
-//    [self saveData];
-//        [self performSegueWithIdentifier: @"SegueToScene1" sender: self];
-    }
-	
 }
 
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-    if([title isEqualToString:@"Cancel"])
-    {
-         NSLog(@"Cancel");
-        [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"master"] animated:YES];
-    }
-}
+//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+//{
+//    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+//    if([title isEqualToString:@"Cancel"])
+//    {
+//         NSLog(@"Cancel");
+//        
+//    }
+//}
 
 
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
       NSLog(@" did Dismiss");
     if (buttonIndex == 0) {
-        NSLog(@"Cancel Tapped.");
+        NSLog(@"Ok Tapped.");
+        
     }
     else if (buttonIndex == 1) {
-        NSLog(@"OK Tapped. Hello World!");
+        NSLog(@"Cancel Tapped. Hello World!");
+//        [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"master"] animated:YES;
+//        [self performSegueWithIdentifier:@"My Segue" sender:self];
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+
     }
 }
 @end
