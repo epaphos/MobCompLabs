@@ -153,7 +153,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN"/>
+                    <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="MHO-r2-sxR">
+                            <connections>
+                                <segue destination="6Q8-Iw-ioc" kind="modal" id="9YX-oF-NY6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblAuthor" destination="lcb-BL-RmT" id="x7D-ye-NIR"/>
                         <outlet property="lblCourse" destination="IKA-gF-HRg" id="1CJ-Jq-WWM"/>
@@ -303,4 +309,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="9YX-oF-NY6"/>
+    </inferredMetricsTieBreakers>
 </document>

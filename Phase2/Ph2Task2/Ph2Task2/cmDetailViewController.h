@@ -18,4 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+- (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender;
+- (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender;
+
 @end
