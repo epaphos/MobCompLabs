@@ -33,6 +33,13 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self prefilledFieldssss];
+//    NSLog(@"viewDidLoad");
+//    NSLog([_prefilledFields author]);
+
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -112,27 +119,33 @@
 
     }
 }
-- (void)setPrefilledFields:(id)newDetailItem
-{
-    NSLog(@"setPrefilledFields");
-    if (newDetailItem) {
-        NSLog(@"title");
-        NSLog(@"%@", [newDetailItem title]);
-        NSLog(@"author");
-        NSLog(@"%@", [newDetailItem author]);
-        [self.tfTitle setText: [newDetailItem title]];
-        [self.tfAuthor setText: [newDetailItem author]];
-        
-    }
-    
+//- (void)setPrefilledFields:(id)newDetailItem
+//{
+//    NSLog(@"setPrefilledFields");
+//    _prefilledFields = newDetailItem;
+//    if (newDetailItem) {
+//        NSLog(@"title");
+//        NSLog(@"%@", [newDetailItem title]);
+//        NSLog(@"author");
+//        NSLog(@"%@", [newDetailItem author]);
+//        [self.tfTitle setText: [[newDetailItem title] copy]];
+//        [self.tfAuthor setText: [newDetailItem author]];
+//        [_tfAuthor setText:@"hallo"];
+//        
+//    }
+
 //    if (self.masterPopoverController != nil) {
 //        [self.masterPopoverController dismissPopoverAnimated:YES];
 //    }
-}
-- (void)prefilledFieldssss:(id)newDetailItem
+//}
+- (void)prefilledFieldssss
 {
-    if (newDetailItem) {
-        self.tfTitle.text = [(Book *)newDetailItem title];
+    if (1){
+        [self.tfTitle setText:[(Book *) _prefilledFields title]];
+        [self.tfAuthor setText:[(Book *) _prefilledFields author]];
+        [self.tfCourse setText:[(Book *) _prefilledFields course]];
+        [self.tfISBN setText:[(Book *) _prefilledFields isbn]];
+        [self.tfPrice setText:[NSString stringWithFormat: @"%d",[(Book *) _prefilledFields price] ]];
     }
     
     //    if (self.masterPopoverController != nil) {

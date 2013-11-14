@@ -14,7 +14,7 @@
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @property (strong, nonatomic) Book *book;
-@property (strong, nonatomic) Book *object;
+
 @end
 
 @implementation cmDetailViewController
@@ -62,10 +62,7 @@
 {
 //    if ([[segue identifier] isEqualToString:@"editBook"]) {
     
-
-
-        _object = _book;
-        [[segue destinationViewController] setPrefilledFields:_object];
+        [[segue destinationViewController] setPrefilledFields:_book];
         NSLog(@"showDetail");
 //    }
 }

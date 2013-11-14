@@ -23,7 +23,7 @@
 
 
 - (IBAction) showAlert;
-- (void)prefilledFieldssss:(id)newDetailItem;
+- (void)prefilledFieldssss;
 
 
 @end
