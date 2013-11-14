@@ -8,6 +8,7 @@
 
 #import "cmDetailViewController.h"
 #import "Book.h"
+#import "cmChangeBookViewController.h"
 
 @interface cmDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -54,6 +55,16 @@
 
 - (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender{
     
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+//    if ([[segue identifier] isEqualToString:@"editBook"]) {
+
+        Book *object = _book;
+        [[segue destinationViewController] setPrefilledFields:_detailItem];
+        NSLog(@"showDetail");
+//    }
 }
 
 - (void)viewDidLoad

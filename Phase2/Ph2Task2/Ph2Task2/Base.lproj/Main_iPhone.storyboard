@@ -156,7 +156,7 @@
                     <navigationItem key="navigationItem" title="Detail" id="cra-N8-TIN">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="MHO-r2-sxR">
                             <connections>
-                                <segue destination="6Q8-Iw-ioc" kind="modal" id="9YX-oF-NY6"/>
+                                <segue destination="o8w-Fh-rnN" kind="push" id="AXj-H5-WZ9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -310,6 +310,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="9YX-oF-NY6"/>
+        <segue reference="AXj-H5-WZ9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,7 @@
 #import "cmMasterViewController.h"
 #import "cmAppDelegate.h"
 
+
 @interface cmChangeBookViewController ()
 
 - (void)saveData;
@@ -111,4 +112,29 @@
 
     }
 }
+- (void)setPrefilledFields:(id)newDetailItem
+{
+    NSLog(@"setPrefilledFields");
+    if (newDetailItem) {
+        NSLog(@"newDetailItem");
+        NSLog([(Book *)newDetailItem title]);
+        [self.tfTitle setText: [(Book *)newDetailItem title]];
+        
+    }
+    
+//    if (self.masterPopoverController != nil) {
+//        [self.masterPopoverController dismissPopoverAnimated:YES];
+//    }
+}
+- (void)prefilledFieldssss:(id)newDetailItem
+{
+    if (newDetailItem) {
+        self.tfTitle.text = [(Book *)newDetailItem title];
+    }
+    
+    //    if (self.masterPopoverController != nil) {
+    //        [self.masterPopoverController dismissPopoverAnimated:YES];
+    //    }
+}
+
 @end
