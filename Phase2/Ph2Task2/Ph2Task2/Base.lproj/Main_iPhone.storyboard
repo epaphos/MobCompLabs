@@ -261,7 +261,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" tag="1" systemItem="done" id="Rd7-xT-nVc">
                             <connections>
-                                <action selector="showAlert" destination="o8w-Fh-rnN" id="XCt-gG-N2a"/>
+                                <segue destination="y84-kp-bhC" kind="unwind" unwindAction="unwindAddBookDone:" id="xk9-AJ-8xU"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

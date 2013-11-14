@@ -50,6 +50,25 @@
     }
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    NSLog(@"shouldPerformSegueWithIdentifier");
+    NSLog(@"%d", [sender tag]);
+    
+    if ([self.tfTitle.text length]<2 && [sender tag]){
+
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You mus fill in a title" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel",nil];
+        UIAlertView *aV = [[UIAlertView alloc] init];
+        
+        [alertView show];
+        NSLog(@"Alert Started");
+        return NO;
+    } else {
+        return YES;
+    }
+
+
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)theTextField {
 
     NSLog(@"shouldReturn");
@@ -103,7 +122,8 @@
     }
     else{
     NSLog(@"Save Data");
-    [self saveData];
+//    [self saveData];
+//        [self performSegueWithIdentifier: @"SegueToScene1" sender: self];
     }
 	
 }
@@ -112,22 +132,22 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-    if([title isEqualToString:@"Cancle"])
+    if([title isEqualToString:@"Cancel"])
     {
-         NSLog(@"Cancle");
+         NSLog(@"Cancel");
         [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"master"] animated:YES];
     }
 }
 
 
 
-//- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-//      NSLog(@" did Dismiss");
-//    if (buttonIndex == 0) {
-//        NSLog(@"Cancel Tapped.");
-//    }
-//    else if (buttonIndex == 1) {
-//        NSLog(@"OK Tapped. Hello World!");
-//    }
-//}
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+      NSLog(@" did Dismiss");
+    if (buttonIndex == 0) {
+        NSLog(@"Cancel Tapped.");
+    }
+    else if (buttonIndex == 1) {
+        NSLog(@"OK Tapped. Hello World!");
+    }
+}
 @end
