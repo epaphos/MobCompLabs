@@ -95,7 +95,7 @@
     self.book.author = self.tfAuthor.text;
     self.book.course = self.tfCourse.text;
     self.book.isbn = self.tfISBN.text;
-    [(UINavigationController *)self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"master"] animated:YES];
+//    [(UINavigationController *)self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"master"] animated:YES];
     
 }
 
