@@ -14,6 +14,7 @@
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
 @property (strong, nonatomic) Book *book;
+@property (strong, nonatomic) Book *object;
 @end
 
 @implementation cmDetailViewController
@@ -60,9 +61,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 //    if ([[segue identifier] isEqualToString:@"editBook"]) {
+    
 
-        Book *object = _book;
-        [[segue destinationViewController] setPrefilledFields:_detailItem];
+
+        _object = _book;
+        [[segue destinationViewController] setPrefilledFields:_object];
         NSLog(@"showDetail");
 //    }
 }

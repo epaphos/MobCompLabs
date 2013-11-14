@@ -116,9 +116,12 @@
 {
     NSLog(@"setPrefilledFields");
     if (newDetailItem) {
-        NSLog(@"newDetailItem");
-        NSLog([(Book *)newDetailItem title]);
-        [self.tfTitle setText: [(Book *)newDetailItem title]];
+        NSLog(@"title");
+        NSLog(@"%@", [newDetailItem title]);
+        NSLog(@"author");
+        NSLog(@"%@", [newDetailItem author]);
+        [self.tfTitle setText: [newDetailItem title]];
+        [self.tfAuthor setText: [newDetailItem author]];
         
     }
     
