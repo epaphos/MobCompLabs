@@ -39,6 +39,10 @@
 //    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (cmDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -126,6 +130,7 @@
         Book *object = [self.bookManager bookAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
         [[segue destinationViewController] setDetailViewBookManager:self.bookManager];
+        [[segue destinationViewController] setIndex:indexPath.row];
         NSLog(@"showDetail");
     } 
 }

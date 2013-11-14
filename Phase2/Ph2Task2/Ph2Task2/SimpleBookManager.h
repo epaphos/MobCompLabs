@@ -14,7 +14,8 @@
 @interface SimpleBookManager : NSObject <BookManagerProtocol> {
 }
 
-
+- (void)removeBookAtIndex:(NSUInteger)ind;
+- (void)insertBook:(Book *)book atIndex:(NSUInteger)ind;
 
 
 @end

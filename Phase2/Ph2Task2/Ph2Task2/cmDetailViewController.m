@@ -51,6 +51,11 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self configureView];
+}
+
 - (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender{
     //nothing here yet
 }
@@ -60,10 +65,14 @@
     NSLog(@"in undwindAddBookDone");
     cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
     if (controller != nil){
-        [self.detailViewBookManager removeBook:controller.book];
-        [self.detailViewBookManager addBook:controller.book];
-
+//        [self.detailViewBookManager removeBook:controller.book];
+//        [self.detailViewBookManager addBook:controller.book];
+        [self.detailViewBookManager removeBookAtIndex:_index];
+        [self.detailViewBookManager insertBook:controller.book atIndex:_index];
+        
     }
+    _book = controller.book;
+    [self configureView];
     
 //    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
 //    if (controller != nil){
@@ -75,8 +84,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
 //    if ([[segue identifier] isEqualToString:@"editBook"]) {
-    
+//    Book *obj = [_book copy];
         [[segue destinationViewController] setPrefilledFields:_book];
+        [[segue destinationViewController] setBook:_book];
+
         NSLog(@"showDetail");
 //    }
 }

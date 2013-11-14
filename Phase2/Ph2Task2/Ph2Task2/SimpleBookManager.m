@@ -67,9 +67,22 @@
 }
 
 - (void)removeBook:(Book *)b{
-    [_allBooks removeObject:b];
-}
+    NSLog(@"removeBook from index");
+    NSLog([NSString stringWithFormat:@"%d",[_allBooks indexOfObject:b] ]);
+//    for (id object in _allBooks)
+//    {
+//        if (b==)
+//    }
 
+    [_allBooks removeObject:b];
+
+}
+- (void)removeBookAtIndex:(NSUInteger)ind{
+    [_allBooks removeObjectAtIndex:ind];
+}
+- (void)insertBook:(Book *)book atIndex:(NSUInteger)ind{
+    [_allBooks insertObject:book atIndex:ind];
+}
 - (void)moveBookAtIndex:(NSUInteger)from toIndex:(NSUInteger)to{
     Book *book = [_allBooks objectAtIndex:from];
     [_allBooks removeObjectAtIndex:from];
