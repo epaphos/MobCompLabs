@@ -125,6 +125,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Book *object = [self.bookManager bookAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
+        [[segue destinationViewController] setDetailViewBookManager:self.bookManager];
         NSLog(@"showDetail");
     } 
 }
@@ -145,9 +146,7 @@
     NSLog(@"%@", controller.book.title);
     [[self tableView]  reloadData];
     }    
-    else{
-    
-    }
+
 }
 
 @end

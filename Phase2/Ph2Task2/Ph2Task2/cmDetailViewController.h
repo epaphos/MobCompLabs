@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblISBN;
 @property (weak, nonatomic) IBOutlet UILabel *lblPrice;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
-
+@property (strong, nonatomic) SimpleBookManager *detailViewBookManager;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 - (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender;

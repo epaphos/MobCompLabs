@@ -5,10 +5,11 @@
 //  Created by Cyrill Averbeck on 2013-11-08.
 //  Copyright (c) 2013 Cyrill Averbeck. All rights reserved.
 //
-
-#import "cmDetailViewController.h"
 #import "Book.h"
+#import "SimpleBookManager.h"
+#import "cmDetailViewController.h"
 #import "cmChangeBookViewController.h"
+#import "cmMasterViewController.h"
 
 @interface cmDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -56,6 +57,19 @@
 
 - (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender{
     
+    NSLog(@"in undwindAddBookDone");
+    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
+    if (controller != nil){
+        [self.detailViewBookManager removeBook:controller.book];
+        [self.detailViewBookManager addBook:controller.book];
+
+    }
+    
+//    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
+//    if (controller != nil){
+//        [self.book :controller.book];
+//        NSLog(@"%@", controller.book.title);
+//    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
