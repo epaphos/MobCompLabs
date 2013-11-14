@@ -44,8 +44,7 @@
     
     NSLog(@"Exit add");
     NSLog(@"%d", [sender tag]);
-    if ([sender tag]){ // save
-        
+    if ([sender tag]){ // save        
         [self saveData];
     }
 }
@@ -53,12 +52,8 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     NSLog(@"shouldPerformSegueWithIdentifier");
     NSLog(@"%d", [sender tag]);
-    
-    if ([self.tfTitle.text length]<2 && [sender tag]){
-
-        
+    if ([self.tfTitle.text length]<2 && [sender tag]){ //tag=1 means Done button
         [self showAlert];
-        NSLog(@"Alert Started");
         return NO;
     } else {
         return YES;
@@ -82,22 +77,10 @@
 
     NSLog(@"saveDataInChangeController");
     
-//    if ([self.tfTitle.text length]<2){
-//
-//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An alert" message:@"The message" delegate:self cancelButtonTitle:@"Cancel title" otherButtonTitles:@"OK", @"Second",nil];
-//        [alertView show];
-//         NSLog(@"Alert Started");
-        //[alertView release];
-        
-        //        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You must fill in a title" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok",nil];
-//        [alertView show];
-//        
-//    }
     Book *book = [[Book alloc]init];
     self.book = book;
     self.book.title = self.tfTitle.text;
     
-//    NSLog(self.tfTitle.text);
     NSLog(@"self.book.title");
     NSLog(@"%@", self.book.title);
     self.book.price = [self.tfPrice.text integerValue];
@@ -108,41 +91,22 @@
     
 }
 
-//- (IBAction)cancleAddBook:(id)sender {
-//}
 
 - (IBAction) showAlert {
-   
-    if ([self.tfTitle.text length]<2){
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You mus fill in a title" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancle",nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Title empty" message:@"You must fill in a title!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel",nil];
     [alertView show];
     NSLog(@"Alert Started");
-    }
 }
-
-
-//- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-//{
-//    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
-//    if([title isEqualToString:@"Cancel"])
-//    {
-//         NSLog(@"Cancel");
-//        
-//    }
-//}
-
 
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
       NSLog(@" did Dismiss");
     if (buttonIndex == 0) {
-        NSLog(@"Ok Tapped.");
+        NSLog(@"Alert Ok Tapped.");
         
     }
     else if (buttonIndex == 1) {
-        NSLog(@"Cancel Tapped. Hello World!");
-//        [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"master"] animated:YES;
-//        [self performSegueWithIdentifier:@"My Segue" sender:self];
+        NSLog(@"Alert Cancel Tapped.");
         [self dismissViewControllerAnimated:TRUE completion:nil];
 
     }
