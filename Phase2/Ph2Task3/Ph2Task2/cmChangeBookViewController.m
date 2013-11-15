@@ -34,7 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self showPrefilledFields];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{

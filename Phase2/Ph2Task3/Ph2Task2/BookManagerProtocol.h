@@ -30,6 +30,7 @@
 
 - (NSUInteger)totalCost;
 - (BOOL)saveChanges;
+- (void)loadData;
 
 @end
 

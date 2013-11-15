@@ -21,6 +21,19 @@
 @implementation SimpleBookManager
 
 
++ (SimpleBookManager *)sharedSimpleBookManager
+{
+    static SimpleBookManager *sharedManager;
+    static dispatch_once_t once;
+    
+    dispatch_once(&once, ^{
+        sharedManager = [[self alloc] init];
+    });
+    return sharedManager;
+}
+
+
+
 - (id)init {
     
     self = [super init];
@@ -29,6 +42,7 @@
         _allBooks = [[NSMutableArray alloc] init];
         
         [self loadData];
+        
         if ([_allBooks count]==0){
         for (int i = 0; i < 5; i++) {
 
@@ -45,6 +59,8 @@
 
 - (Book *)createBook {
     Book *book = [[Book alloc] init];
+    
+    NSLog(@"createBook %@", [_allBooks description]);
     [_allBooks addObject:book];
     
     return book;
@@ -140,7 +156,7 @@
 
 - (NSString *)pathInDocumentDirectory:(NSString *)fileName {
     
-    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSArray *documentDirectories =  NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     
     NSString *documentDirectory = [documentDirectories objectAtIndex:0];
     
@@ -162,6 +178,7 @@
         // Means that data could not be loaded, which for instance would happen the first time
         _allBooks = [[NSMutableArray alloc] init];
     }
+    _allBooks = [NSMutableArray arrayWithArray:_allBooks];
     
 }
 

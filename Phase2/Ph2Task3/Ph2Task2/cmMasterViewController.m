@@ -92,6 +92,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
+        _bookManager = [SimpleBookManager sharedSimpleBookManager];
         [self.bookManager removeBook:[self.bookManager bookAtIndex:indexPath.row]];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
@@ -136,7 +137,7 @@
         UINavigationController *navController = [segue destinationViewController];
         cmChangeBookViewController *changeBookController = [[navController viewControllers] objectAtIndex:0];
 
-        [changeBookController setBook:[_bookManager createBook]]; //hand reference to new book to change book controller
+        [changeBookController setBook:[[SimpleBookManager sharedSimpleBookManager] createBook]]; //hand reference to new book to change book controller
         
     }
 }

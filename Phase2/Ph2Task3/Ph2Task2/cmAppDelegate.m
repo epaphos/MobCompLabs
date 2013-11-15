@@ -24,7 +24,7 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
 //    cmMasterViewController *masterViewController = (cmMasterViewController *)[[navigationController viewControllers]objectAtIndex:0];
     cmMasterViewController *masterViewController = (cmMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
-    _bookManager = [[SimpleBookManager alloc] init];
+    _bookManager = [SimpleBookManager sharedSimpleBookManager];
     masterViewController.bookManager = _bookManager;
     
     return YES;

@@ -14,5 +14,7 @@
 @interface SimpleBookManager : NSObject <BookManagerProtocol> {
 }
 
++ (SimpleBookManager *)sharedSimpleBookManager;
+
 @end
 
