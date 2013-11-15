@@ -12,7 +12,9 @@
 #import "cmAppDelegate.h"
 
 
-@interface cmChangeBookViewController ()
+@interface cmChangeBookViewController () {
+    
+}
 
 - (void)saveData;
 
@@ -32,19 +34,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-//    [self prefilledFieldssss];
-//    NSLog(@"viewDidLoad");
-//    NSLog([_prefilledFields author]);
-
-
     
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    [self prefilledFieldssss];
+
+    [self showPrefilledFields];
 }
 
 - (void)didReceiveMemoryWarning
@@ -121,43 +117,21 @@
     }
     else if (buttonIndex == 1) {
         NSLog(@"Alert Cancel Tapped.");
-        [self dismissViewControllerAnimated:TRUE completion:nil];
+//        [self dismissViewControllerAnimated:TRUE completion:nil];
 
 
     }
 }
-//- (void)setPrefilledFields:(id)newDetailItem
-//{
-//    NSLog(@"setPrefilledFields");
-//    _prefilledFields = newDetailItem;
-//    if (newDetailItem) {
-//        NSLog(@"title");
-//        NSLog(@"%@", [newDetailItem title]);
-//        NSLog(@"author");
-//        NSLog(@"%@", [newDetailItem author]);
-//        [self.tfTitle setText: [[newDetailItem title] copy]];
-//        [self.tfAuthor setText: [newDetailItem author]];
-//        [_tfAuthor setText:@"hallo"];
-//        
-//    }
 
-//    if (self.masterPopoverController != nil) {
-//        [self.masterPopoverController dismissPopoverAnimated:YES];
-//    }
-//}
-- (void)prefilledFieldssss
+- (void)showPrefilledFields
 {
-    if (1){
-        [self.tfTitle setText:[(Book *) _prefilledFields title]];
-        [self.tfAuthor setText:[(Book *) _prefilledFields author]];
-        [self.tfCourse setText:[(Book *) _prefilledFields course]];
-        [self.tfISBN setText:[(Book *) _prefilledFields isbn]];
-        [self.tfPrice setText:[NSString stringWithFormat: @"%d",[(Book *) _prefilledFields price] ]];
-    }
+
+       [self.tfTitle setText:[(Book *) _book title]];
+        [self.tfAuthor setText:[(Book *) _book author]];
+        [self.tfCourse setText:[(Book *) _book course]];
+        [self.tfISBN setText:[(Book *) _book isbn]];
+        [self.tfPrice setText:[NSString stringWithFormat: @"%d",[(Book *) _book price] ]];    
     
-    //    if (self.masterPopoverController != nil) {
-    //        [self.masterPopoverController dismissPopoverAnimated:YES];
-    //    }
 }
 
 @end

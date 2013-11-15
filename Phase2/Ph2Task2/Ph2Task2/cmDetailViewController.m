@@ -11,9 +11,13 @@
 #import "cmChangeBookViewController.h"
 #import "cmMasterViewController.h"
 
-@interface cmDetailViewController ()
+@interface cmDetailViewController () {
+
+}
+
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-- (void)configureView;
+- (void)updateDetailItem;
+
 @property (strong, nonatomic) Book *book;
 
 @end
@@ -28,7 +32,7 @@
         _detailItem = newDetailItem;
         _book = (Book *)newDetailItem;
         // Update the view.
-        [self configureView];
+        [self updateDetailItem];
     }
 
     if (self.masterPopoverController != nil) {
@@ -36,7 +40,7 @@
     }        
 }
 
-- (void)configureView
+- (void)updateDetailItem
 {
     // Update the user interface for the detail item.
 
@@ -47,67 +51,47 @@
         self.lblISBN.text = [self.book isbn];
         self.lblPrice.text = [NSString stringWithFormat:@"%d $",[self.book price]];
         
-        
     }
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [self configureView];
-}
-
-- (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender{
-    //nothing here yet
-}
-
-- (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender{
-    
-    NSLog(@"in undwindAddBookDone");
-    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
-    if (controller != nil){
-//        [self.detailViewBookManager removeBook:controller.book];
-//        [self.detailViewBookManager addBook:controller.book];
-        [self.detailViewBookManager removeBookAtIndex:_index];
-        [self.detailViewBookManager insertBook:controller.book atIndex:_index];
-        
-    }
-    _book = controller.book;
-    [self configureView];
-    
-//    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
-//    if (controller != nil){
-//        [self.book :controller.book];
-//        NSLog(@"%@", controller.book.title);
-//    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-//    if ([[segue identifier] isEqualToString:@"editBook"]) {
-//    Book *obj = [_book copy];
-//    [[[[segue destinationViewController] viewController] objectAtindex:0] setPrefilledFields:_book];
-    
-//        [[segue destinationViewController] setBook:_book];
-    UINavigationController *navController = [segue destinationViewController];
-    cmChangeBookViewController *cm = [[navController viewControllers] objectAtIndex:0];
-    [cm setPrefilledFields:_book];
-    [cm setBook:_book];
-
-        NSLog(@"showDetail %@", [cm description]);
-//    }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self updateDetailItem];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    UINavigationController *navController = [segue destinationViewController];
+    cmChangeBookViewController *changeBookController = [[navController viewControllers] objectAtIndex:0];
+    
+    [changeBookController setBook:_book];
+    
+    //    NSLog(@"showDetail %@", [changeBookController description]);
+}
+
+- (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender{
+    //nothing to do here
+}
+
+- (IBAction)unwindAddBookDone:(UIStoryboardSegue*)sender{
+    
+    //    NSLog(@"in undwindAddBookDone");
+    [self updateDetailItem];
+    
 }
 
 #pragma mark - Split view

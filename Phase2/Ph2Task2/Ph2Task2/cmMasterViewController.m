@@ -130,7 +130,6 @@
         Book *object = [self.bookManager bookAtIndex:indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
         [[segue destinationViewController] setDetailViewBookManager:self.bookManager];
-        [[segue destinationViewController] setIndex:indexPath.row];
         NSLog(@"showDetail");
     } else if ([sender tag]==1){
         

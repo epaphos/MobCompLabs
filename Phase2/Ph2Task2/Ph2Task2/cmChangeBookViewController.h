@@ -13,7 +13,6 @@
 @interface cmChangeBookViewController : UIViewController <UIAlertViewDelegate>
 
 @property (nonatomic, strong) Book *book;
-@property (strong, nonatomic) id prefilledFields;
 
 @property (weak, nonatomic) IBOutlet UITextField *tfAuthor;
 @property (weak, nonatomic) IBOutlet UITextField *tfTitle;
@@ -21,9 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfISBN;
 @property (weak, nonatomic) IBOutlet UITextField *tfPrice;
 
-
 - (IBAction) showAlert;
-- (void)prefilledFieldssss;
+
 
 
 @end

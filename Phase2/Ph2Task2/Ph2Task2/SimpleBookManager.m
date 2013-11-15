@@ -87,6 +87,7 @@
     [_allBooks removeObjectAtIndex:from];
     [_allBooks insertObject:book atIndex:to];
 }
+
 - (NSUInteger) minPrice {
     curMinPrice = 0;
     curMinPrice = [[_allBooks objectAtIndex:0] price];
