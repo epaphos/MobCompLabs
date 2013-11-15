@@ -10,7 +10,7 @@
 
 - (id) init{
 
-    return [self initWithAuthor:@"" title:@"empty" isbn:@"" course:@"" price:0];
+    return [self initWithAuthor:@"" title:@"" isbn:@"" course:@"" price:0];
 }
 
 - (id)  initWithAuthor:(NSString *)theAuthor

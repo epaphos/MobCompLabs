@@ -132,13 +132,27 @@
         [[segue destinationViewController] setDetailViewBookManager:self.bookManager];
         [[segue destinationViewController] setIndex:indexPath.row];
         NSLog(@"showDetail");
-    } 
+    } else if ([sender tag]==1){
+        
+        UINavigationController *navController = [segue destinationViewController];
+        cmChangeBookViewController *changeBookController = [[navController viewControllers] objectAtIndex:0];
+
+        [changeBookController setBook:[_bookManager createBook]]; //hand reference to new book to change book controller
+        
+    }
 }
 
 - (IBAction)unwindAddBookCancel:(UIStoryboardSegue*)sender {
 
     //Nothing needs to be done here
     NSLog(@"in undwindAddBookCancel");
+    cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
+    if (controller != nil){
+        [self.bookManager removeBook:controller.book];
+        NSLog(@"%@", controller.book.title);
+        [[self tableView]  reloadData];
+    }
+
 
 }
 
@@ -147,7 +161,7 @@
     NSLog(@"in undwindAddBookDone");
     cmChangeBookViewController *controller = (cmChangeBookViewController *)sender.sourceViewController;
     if (controller != nil){
-    [self.bookManager addBook:controller.book];
+//    [self.bookManager addBook:controller.book];
     NSLog(@"%@", controller.book.title);
     [[self tableView]  reloadData];
     }    

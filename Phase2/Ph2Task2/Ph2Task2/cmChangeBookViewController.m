@@ -57,7 +57,7 @@
     
     NSLog(@"Exit add");
     NSLog(@"%d", [sender tag]);
-    if ([sender tag]){ // save        
+    if ([sender tag]){
         [self saveData];
     }
 }
@@ -90,8 +90,8 @@
 
     NSLog(@"saveDataInChangeController");
     
-    Book *book = [[Book alloc]init];
-    self.book = book;
+
+
     self.book.title = self.tfTitle.text;
     
     NSLog(@"self.book.title");
@@ -100,6 +100,7 @@
     self.book.author = self.tfAuthor.text;
     self.book.course = self.tfCourse.text;
     self.book.isbn = self.tfISBN.text;
+    
 //    [(UINavigationController *)self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"master"] animated:YES];
     
 }
@@ -121,6 +122,7 @@
     else if (buttonIndex == 1) {
         NSLog(@"Alert Cancel Tapped.");
         [self dismissViewControllerAnimated:TRUE completion:nil];
+
 
     }
 }

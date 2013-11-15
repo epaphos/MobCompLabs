@@ -27,13 +27,12 @@
     if (self) {
         
         _allBooks = [[NSMutableArray alloc] init];
-    
         
         
         for (int i = 0; i < 5; i++) {
-            [self createBook];
+
+            [self addBook:[[Book alloc] initCoolBook] ];
         }
-       
        
         
     }
@@ -43,7 +42,7 @@
 
 
 - (Book *)createBook {
-    Book *book = [[Book alloc] initCoolBook];
+    Book *book = [[Book alloc] init];
     [_allBooks addObject:book];
     
     return book;

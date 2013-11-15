@@ -57,7 +57,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Library" id="tQt-TN-PWz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dgS-u6-Mh1">
+                        <barButtonItem key="rightBarButtonItem" tag="1" systemItem="add" id="dgS-u6-Mh1">
                             <connections>
                                 <segue destination="6Q8-Iw-ioc" kind="modal" id="slh-gs-oB9"/>
                             </connections>
@@ -310,6 +310,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="oJu-ik-aaf"/>
+        <segue reference="slh-gs-oB9"/>
     </inferredMetricsTieBreakers>
 </document>
