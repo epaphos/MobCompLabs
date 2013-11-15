@@ -16,13 +16,18 @@
 		184B61361836767A0066017C /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B61341836767A0066017C /* Main_iPhone.storyboard */; };
 		184B61391836767A0066017C /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184B61371836767A0066017C /* Main_iPad.storyboard */; };
 		184B613C1836767A0066017C /* cmFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B613B1836767A0066017C /* cmFirstViewController.m */; };
-		184B613F1836767A0066017C /* cmSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B613E1836767A0066017C /* cmSecondViewController.m */; };
 		184B61411836767A0066017C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184B61401836767A0066017C /* Images.xcassets */; };
 		184B61481836767A0066017C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184B61471836767A0066017C /* XCTest.framework */; };
 		184B61491836767A0066017C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184B61221836767A0066017C /* Foundation.framework */; };
 		184B614A1836767A0066017C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184B61261836767A0066017C /* UIKit.framework */; };
 		184B61521836767A0066017C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 184B61501836767A0066017C /* InfoPlist.strings */; };
 		184B61541836767A0066017C /* Ph2Task3bTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B61531836767A0066017C /* Ph2Task3bTests.m */; };
+		184B616218367E8D0066017C /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B615E18367E8D0066017C /* Book.m */; };
+		184B616318367E8D0066017C /* SimpleBookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B616118367E8D0066017C /* SimpleBookManager.m */; };
+		184B616A1836807D0066017C /* cmChangeBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B61651836807D0066017C /* cmChangeBookViewController.m */; };
+		184B616B1836807D0066017C /* cmDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B61671836807D0066017C /* cmDetailViewController.m */; };
+		184B616C1836807D0066017C /* cmMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B61691836807D0066017C /* cmMasterViewController.m */; };
+		184B616F183682E60066017C /* cmSummaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184B616E183682E60066017C /* cmSummaryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +55,25 @@
 		184B61381836767A0066017C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		184B613A1836767A0066017C /* cmFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cmFirstViewController.h; sourceTree = "<group>"; };
 		184B613B1836767A0066017C /* cmFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cmFirstViewController.m; sourceTree = "<group>"; };
-		184B613D1836767A0066017C /* cmSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cmSecondViewController.h; sourceTree = "<group>"; };
-		184B613E1836767A0066017C /* cmSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cmSecondViewController.m; sourceTree = "<group>"; };
 		184B61401836767A0066017C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		184B61461836767A0066017C /* Ph2Task3bTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Ph2Task3bTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184B61471836767A0066017C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		184B614F1836767A0066017C /* Ph2Task3bTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ph2Task3bTests-Info.plist"; sourceTree = "<group>"; };
 		184B61511836767A0066017C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		184B61531836767A0066017C /* Ph2Task3bTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ph2Task3bTests.m; sourceTree = "<group>"; };
+		184B615D18367E8D0066017C /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		184B615E18367E8D0066017C /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		184B615F18367E8D0066017C /* BookManagerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookManagerProtocol.h; sourceTree = "<group>"; };
+		184B616018367E8D0066017C /* SimpleBookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBookManager.h; sourceTree = "<group>"; };
+		184B616118367E8D0066017C /* SimpleBookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBookManager.m; sourceTree = "<group>"; };
+		184B61641836807D0066017C /* cmChangeBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmChangeBookViewController.h; sourceTree = "<group>"; };
+		184B61651836807D0066017C /* cmChangeBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmChangeBookViewController.m; sourceTree = "<group>"; };
+		184B61661836807D0066017C /* cmDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmDetailViewController.h; sourceTree = "<group>"; };
+		184B61671836807D0066017C /* cmDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmDetailViewController.m; sourceTree = "<group>"; };
+		184B61681836807D0066017C /* cmMasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmMasterViewController.h; sourceTree = "<group>"; };
+		184B61691836807D0066017C /* cmMasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmMasterViewController.m; sourceTree = "<group>"; };
+		184B616D183682E60066017C /* cmSummaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmSummaryViewController.h; sourceTree = "<group>"; };
+		184B616E183682E60066017C /* cmSummaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmSummaryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,14 +133,25 @@
 		184B61281836767A0066017C /* Ph2Task3b */ = {
 			isa = PBXGroup;
 			children = (
+				184B616D183682E60066017C /* cmSummaryViewController.h */,
+				184B616E183682E60066017C /* cmSummaryViewController.m */,
+				184B61641836807D0066017C /* cmChangeBookViewController.h */,
+				184B61651836807D0066017C /* cmChangeBookViewController.m */,
+				184B61661836807D0066017C /* cmDetailViewController.h */,
+				184B61671836807D0066017C /* cmDetailViewController.m */,
+				184B61681836807D0066017C /* cmMasterViewController.h */,
+				184B61691836807D0066017C /* cmMasterViewController.m */,
+				184B615D18367E8D0066017C /* Book.h */,
+				184B615E18367E8D0066017C /* Book.m */,
+				184B615F18367E8D0066017C /* BookManagerProtocol.h */,
+				184B616018367E8D0066017C /* SimpleBookManager.h */,
+				184B616118367E8D0066017C /* SimpleBookManager.m */,
 				184B61311836767A0066017C /* cmAppDelegate.h */,
 				184B61321836767A0066017C /* cmAppDelegate.m */,
 				184B61341836767A0066017C /* Main_iPhone.storyboard */,
 				184B61371836767A0066017C /* Main_iPad.storyboard */,
 				184B613A1836767A0066017C /* cmFirstViewController.h */,
 				184B613B1836767A0066017C /* cmFirstViewController.m */,
-				184B613D1836767A0066017C /* cmSecondViewController.h */,
-				184B613E1836767A0066017C /* cmSecondViewController.m */,
 				184B61401836767A0066017C /* Images.xcassets */,
 				184B61291836767A0066017C /* Supporting Files */,
 			);
@@ -259,9 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184B616218367E8D0066017C /* Book.m in Sources */,
+				184B616B1836807D0066017C /* cmDetailViewController.m in Sources */,
 				184B61331836767A0066017C /* cmAppDelegate.m in Sources */,
+				184B616F183682E60066017C /* cmSummaryViewController.m in Sources */,
 				184B613C1836767A0066017C /* cmFirstViewController.m in Sources */,
-				184B613F1836767A0066017C /* cmSecondViewController.m in Sources */,
+				184B616A1836807D0066017C /* cmChangeBookViewController.m in Sources */,
+				184B616318367E8D0066017C /* SimpleBookManager.m in Sources */,
+				184B616C1836807D0066017C /* cmMasterViewController.m in Sources */,
 				184B612F1836767A0066017C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
