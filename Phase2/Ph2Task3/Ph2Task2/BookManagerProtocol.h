@@ -29,7 +29,7 @@
 - (CGFloat)meanPrice;
 
 - (NSUInteger)totalCost;
-- (void)saveChanges;
+- (BOOL)saveChanges;
 
 @end
 

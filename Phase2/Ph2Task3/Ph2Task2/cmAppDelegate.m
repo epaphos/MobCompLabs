@@ -24,8 +24,8 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
 //    cmMasterViewController *masterViewController = (cmMasterViewController *)[[navigationController viewControllers]objectAtIndex:0];
     cmMasterViewController *masterViewController = (cmMasterViewController *)[[navigationController viewControllers] objectAtIndex:0];
-    SimpleBookManager *bookManager = [[SimpleBookManager alloc] init];
-    masterViewController.bookManager = bookManager;
+    _bookManager = [[SimpleBookManager alloc] init];
+    masterViewController.bookManager = _bookManager;
     
     return YES;
 }
@@ -40,6 +40,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self.bookManager saveChanges];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

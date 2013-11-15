@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SimpleBookManager;
+
 @interface cmAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) SimpleBookManager *bookManager;
 
 @end

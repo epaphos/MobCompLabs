@@ -28,12 +28,14 @@
         
         _allBooks = [[NSMutableArray alloc] init];
         
-        
+        [self loadData];
+        if ([_allBooks count]==0){
         for (int i = 0; i < 5; i++) {
 
             [self addBook:[[Book alloc] initCoolBook] ];
         }
-       
+        
+        }
         
     }
     
@@ -134,7 +136,38 @@
     return calc;
 }
 
-- (void)saveChanges{
+#define kFileName @"Books.data"
+
+- (NSString *)pathInDocumentDirectory:(NSString *)fileName {
+    
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentDirectory = [documentDirectories objectAtIndex:0];
+    
+    return [documentDirectory stringByAppendingPathComponent:fileName];
+}
+
+- (NSString *)bookStoreDataPath {
+    
+    return [self pathInDocumentDirectory:kFileName];
+    
+}
+
+- (void)loadData {
+    
+    _allBooks = [NSKeyedUnarchiver unarchiveObjectWithFile:[self bookStoreDataPath]];
+    
+    if (!_allBooks) {
+        
+        // Means that data could not be loaded, which for instance would happen the first time
+        _allBooks = [[NSMutableArray alloc] init];
+    }
+    
+}
+
+- (BOOL)saveChanges{
+    return [NSKeyedArchiver archiveRootObject:self.allBooks toFile:[self bookStoreDataPath]];
+
 }
 
 @end

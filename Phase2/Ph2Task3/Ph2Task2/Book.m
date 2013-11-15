@@ -39,5 +39,35 @@
     return [self initWithAuthor:@"Mike" title:@"Good Book" isbn:@"123456789" course:@"fubar" price:arc4random()%100];
 }
 
+#pragma mark NSCoding and NSCopying
+
+#define kAuthorKey @"author"
+#define kTitleKey @"title"
+#define kIsbnKey @"isbn"
+#define kCourseKey @"course"
+#define kPriceKey @"price"
+
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    if (self) {
+        self.author = [aDecoder decodeObjectForKey:kAuthorKey];
+        self.title = [aDecoder decodeObjectForKey:kTitleKey];
+        self.isbn = [aDecoder decodeObjectForKey:kIsbnKey];
+        self.course = [aDecoder decodeObjectForKey:kCourseKey];
+        self.price = [aDecoder decodeIntForKey:kPriceKey];
+    }
+    
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:self.author forKey:kAuthorKey];
+    [aCoder encodeObject:self.title forKey:kTitleKey];
+    [aCoder encodeObject:self.isbn forKey:kIsbnKey];
+    [aCoder encodeObject:self.course forKey:kCourseKey];
+    [aCoder encodeInt:self.price forKey:kPriceKey];
+
+}
 
 @end
