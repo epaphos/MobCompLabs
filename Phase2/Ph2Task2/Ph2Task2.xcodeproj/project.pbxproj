@@ -501,6 +501,7 @@
 				E7F94299182D3DF50082D57B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7F9429A182D3DF50082D57B /* Build configuration list for PBXNativeTarget "Ph2Task2Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +510,7 @@
 				E7F9429C182D3DF50082D57B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
