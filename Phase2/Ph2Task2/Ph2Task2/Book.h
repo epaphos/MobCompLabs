@@ -1,10 +1,6 @@
 //
 //  Book.h
-//  Task1
-//
-//  Created by MSchade on 03/11/13.
-//  Copyright (c) 2013 MSchade. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 
@@ -20,4 +16,5 @@
 
 -(id) initWithAuthor: (NSString*) author title: (NSString*) title isbn: (NSString*) isbn course: (NSString*) course price: (NSInteger) price;
 -(id) initCoolBook;
+
 @end

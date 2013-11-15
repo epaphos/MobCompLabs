@@ -1,10 +1,6 @@
 //
 //  Book.m
-//  Task1
-//
-//  Created by MSchade on 03/11/13.
-//  Copyright (c) 2013 MSchade. All rights reserved.
-//
+
 
 #import "Book.h"
 
@@ -12,11 +8,11 @@
 @implementation Book
 
 
-/*
- 
- also implement init and call the one below with default values
- 
- */
+- (id) init{
+
+    return [self initWithAuthor:@"" title:@"empty" isbn:@"" course:@"" price:0];
+}
+
 - (id)  initWithAuthor:(NSString *)theAuthor
                  title:(NSString *)theTitle
                   isbn:(NSString *)theIsbn
@@ -38,6 +34,7 @@
     return self;
 }
 
+//The following code (hash and isEqual) tried to 
 //- (NSUInteger)hash{
 //    
 //    return 0;
