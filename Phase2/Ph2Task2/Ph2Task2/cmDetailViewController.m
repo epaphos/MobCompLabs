@@ -85,10 +85,15 @@
 {
 //    if ([[segue identifier] isEqualToString:@"editBook"]) {
 //    Book *obj = [_book copy];
-        [[segue destinationViewController] setPrefilledFields:_book];
-        [[segue destinationViewController] setBook:_book];
+//    [[[[segue destinationViewController] viewController] objectAtindex:0] setPrefilledFields:_book];
+    
+//        [[segue destinationViewController] setBook:_book];
+    UINavigationController *navController = [segue destinationViewController];
+    cmChangeBookViewController *cm = [[navController viewControllers] objectAtIndex:0];
+    [cm setPrefilledFields:_book];
+    [cm setBook:_book];
 
-        NSLog(@"showDetail");
+        NSLog(@"showDetail %@", [cm description]);
 //    }
 }
 

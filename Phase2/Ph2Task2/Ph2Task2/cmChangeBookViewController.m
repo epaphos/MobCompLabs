@@ -34,12 +34,17 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self prefilledFieldssss];
+//    [self prefilledFieldssss];
 //    NSLog(@"viewDidLoad");
 //    NSLog([_prefilledFields author]);
 
 
     
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self prefilledFieldssss];
 }
 
 - (void)didReceiveMemoryWarning
