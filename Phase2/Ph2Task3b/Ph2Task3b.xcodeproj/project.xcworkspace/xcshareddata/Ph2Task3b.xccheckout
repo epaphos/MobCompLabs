@@ -5,31 +5,27 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>441A0466-DFA4-4754-A250-B23AA03BCE70</string>
+	<string>1190FE76-78DE-4A4F-B835-EA6015D0F677</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Ph2Task3</string>
+	<string>Ph2Task3b</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>74390D41-BCDD-42FA-80EB-89499CB5D7D1</key>
 		<string>https://github.com/epaphos/MobCompLabs</string>
-		<key>E54E61F4-35A6-402D-B97C-9DDF88CD83E3</key>
-		<string>https://github.com/epaphos/MobCompLabs</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Ph2Task3.xcodeproj/project.xcworkspace</string>
+	<string>Phase2/Ph2Task3b/Ph2Task3b.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>74390D41-BCDD-42FA-80EB-89499CB5D7D1</key>
 		<string>../../../..</string>
-		<key>E54E61F4-35A6-402D-B97C-9DDF88CD83E3</key>
-		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/epaphos/MobCompLabs</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E54E61F4-35A6-402D-B97C-9DDF88CD83E3</string>
+	<string>74390D41-BCDD-42FA-80EB-89499CB5D7D1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -37,14 +33,6 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>74390D41-BCDD-42FA-80EB-89499CB5D7D1</string>
-			<key>IDESourceControlWCCName</key>
-			<string>Ph2Task3</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>E54E61F4-35A6-402D-B97C-9DDF88CD83E3</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Ph2Task3</string>
 		</dict>

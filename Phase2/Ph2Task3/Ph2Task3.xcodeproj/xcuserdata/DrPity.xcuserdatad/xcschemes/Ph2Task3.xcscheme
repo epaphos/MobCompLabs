@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E7F9425E182D3DF50082D57B"
-               BuildableName = "Ph2Task2.app"
-               BlueprintName = "Ph2Task2"
-               ReferencedContainer = "container:Ph2Task2.xcodeproj">
+               BuildableName = "Ph2Task3.app"
+               BlueprintName = "Ph2Task3"
+               ReferencedContainer = "container:Ph2Task3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E7F94285182D3DF50082D57B"
-               BuildableName = "Ph2Task2Tests.xctest"
-               BlueprintName = "Ph2Task2Tests"
-               ReferencedContainer = "container:Ph2Task2.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7F9425E182D3DF50082D57B"
-            BuildableName = "Ph2Task2.app"
-            BlueprintName = "Ph2Task2"
-            ReferencedContainer = "container:Ph2Task2.xcodeproj">
+            BuildableName = "Ph2Task3.app"
+            BlueprintName = "Ph2Task3"
+            ReferencedContainer = "container:Ph2Task3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7F9425E182D3DF50082D57B"
-            BuildableName = "Ph2Task2.app"
-            BlueprintName = "Ph2Task2"
-            ReferencedContainer = "container:Ph2Task2.xcodeproj">
+            BuildableName = "Ph2Task3.app"
+            BlueprintName = "Ph2Task3"
+            ReferencedContainer = "container:Ph2Task3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E7F9425E182D3DF50082D57B"
-            BuildableName = "Ph2Task2.app"
-            BlueprintName = "Ph2Task2"
-            ReferencedContainer = "container:Ph2Task2.xcodeproj">
+            BuildableName = "Ph2Task3.app"
+            BlueprintName = "Ph2Task3"
+            ReferencedContainer = "container:Ph2Task3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
