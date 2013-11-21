@@ -43,13 +43,13 @@
         
         [self loadData];
         
-        if ([_allBooks count]==0){
-        for (int i = 0; i < 5; i++) {
-
-            [self addBook:[[Book alloc] initCoolBook] ];
-        }
-        
-        }
+//        if ([_allBooks count]==0){
+//        for (int i = 0; i < 5; i++) {
+//
+//            [self addBook:[[Book alloc] initCoolBook] ];
+//        }
+//        
+//        }
         
     }
     
@@ -108,7 +108,10 @@
 
 - (NSUInteger) minPrice {
     curMinPrice = 0;
-    curMinPrice = [[_allBooks objectAtIndex:0] price];
+    if ([_allBooks count]) {
+        curMinPrice = [[_allBooks objectAtIndex:0] price];
+    
+    
     for (id book in _allBooks) {
         
         if ([book price] < curMinPrice) {
@@ -117,12 +120,15 @@
         }
         
     }
+    }
     return curMinPrice;
 }
 
 
 - (NSUInteger) maxPrice {
     curMaxPrice = 0;
+    if ([_allBooks count]) {
+
     curMaxPrice = [[_allBooks objectAtIndex:0] price];
     
     for ( id book in _allBooks) {
@@ -132,6 +138,7 @@
             curMaxPrice = [book price];
         }
         
+    }
     }
     return curMaxPrice;
 }
@@ -148,8 +155,12 @@
 
 
 - (CGFloat)meanPrice {
+    if ([_allBooks count]) {
+
     CGFloat calc = (CGFloat)[self totalCost]/(CGFloat)[self count];
     return calc;
+    }
+    else return 0;
 }
 
 #define kFileName @"Books.data"

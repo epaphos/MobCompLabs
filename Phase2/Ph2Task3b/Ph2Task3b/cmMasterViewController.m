@@ -22,10 +22,7 @@
 
 - (void)awakeFromNib
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-        self.clearsSelectionOnViewWillAppear = NO;
-        self.preferredContentSize = CGSizeMake(320.0, 600.0);
-    }
+    
     [super awakeFromNib];
 }
 
@@ -101,12 +98,15 @@
     }
 }
 
-/*
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    [[SimpleBookManager sharedSimpleBookManager] moveBookAtIndex:fromIndexPath.row toIndex:toIndexPath.row];
+//    [[self tableView]  reloadData];
+
 }
-*/
+
 
 /*
 // Override to support conditional rearranging of the table view.
